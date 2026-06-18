@@ -1,0 +1,3 @@
+# Ejecución completamente secuencial (1 hilo, sin OpenMP ni MPI)
+np tiempo_medio_sec distance_media
+1 8.365000 4043062.620000

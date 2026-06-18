@@ -1,0 +1,3 @@
+# NEM = 5, NGM = 15
+np tiempo_medio_sec distance_media
+4 4.930000 4046085.990000

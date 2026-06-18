@@ -1,0 +1,5 @@
+np = 8 (hilos OpenMP)
+mrate = 0.15
+repeticiones = 2
+tiempo_medio_sec = 2.025000
+distance_media = 4039638.930000

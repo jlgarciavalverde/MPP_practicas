@@ -1,0 +1,7 @@
+# Parámetros: n m n_gen tam_pob m_rate threshold_percent window_size. Modificar los valores según se considere oportuno.
+# 500 200 100 50 0.15 0.05 5
+ 1000 400 200 100 0.10
+# 1500 600 300 150 0.20 0.10 7
+# 2000 800 400 200 0.12 0.05 5
+# 5 3 500 100 0.33 0.05 5
+# 5 3 500 100 0.33 0.05 5

@@ -1,0 +1,7 @@
+np = 4
+NEM = 5
+NGM = 15
+mrate = 0.15
+repeticiones = 2
+tiempo_medio_sec = 5.180000
+distance_media = 4046221.230000
