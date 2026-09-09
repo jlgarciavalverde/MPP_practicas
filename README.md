@@ -32,6 +32,30 @@ Cada práctica incluye:
 - Resultados de ejecución comparativos (`resultados_sec_omp8/`)
 - Memoria en PDF con análisis de speedup y eficiencia
 
+## Arquitectura
+
+```mermaid
+graph LR
+    Init[Inicialización población] --> Fit[Evaluación fitness]
+    Fit --> Sel[Selección]
+    Sel --> Cruce[Cruce]
+    Cruce --> Mut[Mutación]
+    Mut -->|siguiente generación| Fit
+
+    subgraph "Paralelización por práctica"
+        P0["P0: secuencial"]
+        P1["P1: OpenMP (init + fitness)"]
+        P2["P2: OpenMP optimizado"]
+        P3["P3: MPI (población distribuida)"]
+        P4["P4: MPI + OpenMP híbrido"]
+    end
+```
+
+Mismo algoritmo genético en las 5 prácticas; lo que cambia es cómo se paraleliza el bucle
+init → fitness → selección → cruce → mutación: de secuencial (P0), a hilos OpenMP sobre memoria
+compartida (P1-P2), a procesos MPI con la población distribuida entre nodos (P3), hasta el híbrido
+MPI+OpenMP final (P4).
+
 ## Compilación
 
 ```bash
@@ -80,3 +104,7 @@ Las carpetas `resultados_sec_omp8/` contienen comparativas entre la versión sec
 Proyecto académico — **Universidad de Murcia**, asignatura **Modelos de Programación Paralela (MPP)**.
 
 - José Luis García Valverde
+
+## Licencia
+
+MIT — ver [`LICENSE`](./LICENSE).
